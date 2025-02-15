@@ -4,7 +4,7 @@ from colorama import init, Fore
 # Inicializar colorama
 init(autoreset=True)
 
-# Tarifas en céntimos por segundo
+# Tarifas en cent x seg
 TARIFA_MOVIMIENTO = 5
 TARIFA_PARADO = 2
 
