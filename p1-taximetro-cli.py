@@ -3,50 +3,41 @@ import time
 import threading
 from colorama import init, Fore
 
-# Inicializar colorama
+# colorama
 init(autoreset=True)
 
-# Tarifas en céntimos por segundo
+# Tarifas 
 TARIFA_MOVIMIENTO = 5
 TARIFA_PARADO = 2
 
-# Variables globales para el hilo de conteo
 total_centimos = 0
-estado_actual = "p"  # Empieza detenido
-ejecutando = False   # Control del hilo
+estado_actual = "p"  
+ejecutando = False   
 
 def bienvenida():
-    """Muestra un saludo y obtiene el nombre del usuario."""
     print(Fore.CYAN + "🚖 ¡Bienvenido al Taxímetro Digital! 😁")
     nombre = input(Fore.YELLOW + "Ingresa tu nombre: " + Fore.RESET).strip()
     print(Fore.GREEN + f"\nHola, {nombre}, en este taxímetro calcularemos tu tarifa en tiempo real. 😊")
     return nombre
 
 def mostrar_menu():
-    """Muestra las opciones del menú principal."""
     print(Fore.MAGENTA + "\nOpciones:")
     print(Fore.BLUE + "  [c]" + Fore.MAGENTA + " Comenzar un trayecto.")
     print(Fore.RED + "  [f]" + Fore.MAGENTA + " Finalizar el programa.")
 
 def actualizar_tarifa():
-    """
-    Hilo que se encarga de:
-    - Limpiar la pantalla en cada iteración.
-    - Mostrar la tarifa en tiempo real y el estado actual.
-    - Repetir cada segundo mientras 'ejecutando' sea True.
-    """
     global total_centimos, estado_actual, ejecutando
     
     while ejecutando:
         time.sleep(1)
-        # Aumentar tarifa en función del estado
+        # Aumentar tarifa por tipo estado
         tarifa = TARIFA_MOVIMIENTO if estado_actual == "m" else TARIFA_PARADO
         total_centimos += tarifa
 
-        # Limpiar pantalla
+        # Limpiar
         os.system('cls' if os.name == 'nt' else 'clear')
 
-        # Mostrar información en una sola línea
+        # Mostrar tarifa
         total_euros = total_centimos / 100
         estado_texto = "🚗 Moviendo" if estado_actual == "m" else "⏳ Parado"
         print(
@@ -56,19 +47,13 @@ def actualizar_tarifa():
         )
 
 def calcular_tarifa():
-    """
-    Inicia el conteo en segundo plano (hilo),
-    espera a que el usuario cambie de estado o finalice,
-    y al finalizar limpia la pantalla y muestra el total.
-    """
     global total_centimos, estado_actual, ejecutando
 
-    # Resetear valores
+    # Resetea
     total_centimos = 0
     estado_actual = "p"
     ejecutando = True
 
-    # Iniciar hilo
     hilo = threading.Thread(target=actualizar_tarifa, daemon=True)
     hilo.start()
 
@@ -84,10 +69,10 @@ def calcular_tarifa():
         else:
             print(Fore.RED + "⚠️ Comando no reconocido. Usa 'm', 'p' o 'f'.")
 
-    # Esperar a que el hilo termine
+    # Esperar a hilo
     hilo.join()
 
-    # Limpiar la pantalla para no dejar restos
+    # Limpiar 
     os.system('cls' if os.name == 'nt' else 'clear')
 
     # Mostrar total final
@@ -111,7 +96,7 @@ def main():
                 print(Fore.RED + "⚠️ Opción no válida. Intenta de nuevo.")
 
     except KeyboardInterrupt:
-        print(Fore.RED + "\n⚠️ Programa interrumpido. ¡Hasta luego!")
+        print(Fore.RED + "\n⚠️ Programa interrumpido. ¡Bye bye!")
 
 if __name__ == "__main__":
     main()
