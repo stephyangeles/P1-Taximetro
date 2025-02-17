@@ -10,6 +10,11 @@ Bienvenido a **Taxímetro Digital**, una aplicación en Python que simula el fun
 - ⏳ **Estados: "Moviendo" y "Parado"**, con diferentes tarifas aplicadas.
 - 🛑 **Finalización segura** con mensajes de despedida.
 
+> [!IMPORTANT]
+>
+>El nivel esencial se escuentra el la rama main, en la rama de desarrollador se encuentran las mejoras añadidas tales como, OPP, LOGS, CONTADOR.
+>
+
 ## 📌 Requisitos
 
 Asegúrate de tener instalado **Python 3.6 o superior**. También necesitarás instalar las siguientes librerías:
