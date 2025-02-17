@@ -46,7 +46,9 @@ pip install colorama
 - **Threading** 🔄 para actualizar tarifas en segundo plano.
 
 ## 📸 Kanbam
-
+![P1-Taximetro-Stephany-Kaban-Status](https://github.com/user-attachments/assets/1b6c3561-13c2-4c47-8410-a2194f3b9c64)
+![P1-Taximetro-Stephany-Kaban-Timeline](https://github.com/user-attachments/assets/fea739a6-c8a5-4dd2-a007-5af5fa4e4022)
+![P1-Taximetro-Stephany-Kaban-Tasks](https://github.com/user-attachments/assets/5b200641-7b57-4985-a6c0-c4eafa66d256)
 
 
 ## 💡 Contribuciones
