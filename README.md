@@ -50,6 +50,9 @@ pip install colorama
 - **Colorama** 🎨 para mejorar la experiencia visual en la terminal.
 - **Threading** 🔄 para actualizar tarifas en segundo plano.
 
+## SSH 
+![P1-Taximetro-Stephany-SSH](https://github.com/user-attachments/assets/a67047c2-23c1-4368-866e-4604f1e7d9cd)
+
 ## 📸 Kanbam
 ![P1-Taximetro-Stephany-Kaban-Status](https://github.com/user-attachments/assets/1b6c3561-13c2-4c47-8410-a2194f3b9c64)
 ![P1-Taximetro-Stephany-Kaban-Timeline](https://github.com/user-attachments/assets/fea739a6-c8a5-4dd2-a007-5af5fa4e4022)
